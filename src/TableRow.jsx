@@ -193,7 +193,7 @@ export default class TableRow extends React.Component {
       );
     }
     const height = this.props.height || this.state.height;
-    const style = { height };
+    const style = { height: indent > 0 ? 'auto' : height };
     if (!visible) {
       style.display = 'none';
     }

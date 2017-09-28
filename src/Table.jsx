@@ -651,7 +651,7 @@ export default class Table extends React.Component {
     const headRows = this.refs.headTable ?
             this.refs.headTable.querySelectorAll('thead') :
             this.refs.bodyTable.querySelectorAll('thead');
-    const bodyRows = this.refs.bodyTable.querySelectorAll(`.${prefixCls}-row`) || [];
+    const bodyRows = this.refs.bodyTable.querySelectorAll(`.${prefixCls}-row.${prefixCls}-row-level-0`) || [];
     const fixedColumnsHeadRowsHeight = [].map.call(
       headRows, row => row.getBoundingClientRect().height || 'auto'
     );
